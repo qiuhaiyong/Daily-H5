@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: rgb(35, 35, 35);
+  }
+
+  span {
+    font-size: 20px;
+    color: blanchedalmond;
+    position: absolute;
+    transition: 1s;
+  }
+</style>
+
+<body>
+  <script>
+    // 随机的文字
+    let arr = ["富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法制", "爱国", "敬业", "诚信", "友善"]
+    document.addEventListener('click', function (x) {
+      // 创建元素节点对象
+      let span = document.createElement('span')
+      // 获取鼠标点击的位置 并且在鼠标点击的位置添加span标签
+      span.style.left = x.clientX + 'px'
+      span.style.top = x.clientY + 'px'
+      // 让span的值位arr数组内随机的一个值
+      span.innerHTML = arr[Math.floor(Math.random() * arr.length)]
+      // 设置span的动画效果
+      setTimeout(function () {
+        span.style.opacity = "1"
+        span.style.transform = 'translateY(-100px)'
+      }, 100)
+      setTimeout(function () {
+        span.style.opacity = "0"
+        span.style.transform = 'translateY(-100px)'
+      }, 1500)
+      // 清除opacity为0的span
+      let opa = document.querySelectorAll('span')
+      for (let i = 0; i < opa.length; i++) {
+        if (opa[i].style.opacity === '0') {
+          document.body.removeChild(opa[i])
+        }
+      }
+      // 将span 添加道body重
+      document.body.appendChild(span)
+    })
+  </script>
+</body>
+
+</html>

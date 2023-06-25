@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #7f8c8d;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 900px;
+  height: 300px;
+  position: relative;
+  top: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.image{
+  transition: .5s;
+  overflow: hidden;
+}
+
+.image:hover{
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+
+img{
+  width: 400px;
+}
