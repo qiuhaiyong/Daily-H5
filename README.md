@@ -11,3 +11,7 @@
 ### 03.闪烁霓虹灯
 
 ![img3](https://github.com/qiuhaiyong/Daily-H5/blob/main/00-source/Video_2023-06-26_190505.gif)
+
+### 04.旋转波浪框
+
+![img4](https://github.com/qiuhaiyong/Daily-H5/blob/main/00-source/Video_2023-06-27_153033.gif)
